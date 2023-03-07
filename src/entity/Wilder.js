@@ -9,7 +9,7 @@ module.exports = new EntitySchema({
             type: "int"
         },
         name: {
-            type:"text",
+            type: "text",
         },
     }
 })
