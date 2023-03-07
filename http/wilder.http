@@ -18,9 +18,6 @@ Content-Type: application/json
 }
 
 ### 
-DELETE http://localhost:3000/api/wilder/2
+DELETE http://localhost:3000/api/wilder/3
 Content-Type: application/json
 
-{
-    "name": "Test"
-}
