@@ -35,6 +35,7 @@ module.exports = {
                   res.send("Error while updating wilder");
               });
       },
+      /*
       delete: (req, res) => {
           dataSource 
               .getRepository(Wilder)
@@ -46,4 +47,23 @@ module.exports = {
                   res.send("Error while removing wilder");
               });
       },
+      */
+      delete: async(req, res) => {
+       // const repository = dataSource.getRepository(Wilder); // syntaxe plus courte à mettre ligne 55 datasource.repository(Wilder)...
+        try { // je fais tourner des instructions si ca ne marche pas je rentre dans le catch error
+            // trouve un wilder par identifiant
+            const user = await dataSource.getRepository(Wilder).findOneBy({id: req.params.id});
+          //  console.log(user);
+            if(!user){
+                throw new Error(); // connecte au catch (error)
+            }
+            await dataSource 
+            .getRepository(Wilder)
+            .delete(req.params.id)
+                res.send("Delete wilder");
+            } catch (error) {
+               // res.statuts(500).json("Test error 500");
+                res.status(404).send("Test error 404");
+        }
+    },
 };
