@@ -1,6 +1,7 @@
 import "./App.css";
 import "./styles/wilder.css";
 import Wilder from "./components/Wilder.js";
+import dataWilders from "./utils/data.js";
 // import { useState } from 'react';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                     <Wilder name="Jone Doe"/>
                     <Wilder name="Bibi"/>
                     <Wilder name="Toto"/>
+                    {dataWilders}
 			</main>
 			<footer>
 				<div className="container">

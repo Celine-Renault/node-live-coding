@@ -16,10 +16,10 @@ const Wilder = ({name}) => {
 			commodo consequat.
 		</p>
 		<h4>Wild Skills</h4> <ul className="skills"> 
-            <Skill title="HTML" vote={"2"}/>
-			<Skill title="JS" vote={"3"}/>
-			<Skill title="REACT" vote={"1"}/>
-			<Skill title="NODE JS" vote={"5"}/>
+            <Skill title="HTML" votes={"2"}/>
+			<Skill title="JS" votes={"3"}/>
+			<Skill title="REACT" votes={"1"}/>
+			<Skill title="NODE JS" votes={"5"}/>
 		</ul>
 	</article>;
     </>
