@@ -27,6 +27,7 @@ app.get("/api/skill", skillController.read);
 app.put("/api/skill/:id", skillController.update);
 app.delete("/api/skill/:id", skillController.delete);
 
+// Root Wilder & Skill
 app.post("/api/wilder/:wilderId/skill/:skillId/add", wilderController.addSkill);
 
 const start = async() => {

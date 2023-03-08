@@ -89,10 +89,10 @@ module.exports = {
                 return res.statuts(404).send('Skill not found');
             }
 
-            wilderToUpdate.skills = [...wilderToUpdate.skills, skillToAdd];
-
+            wilderToUpdate.skills = [...wilderToUpdate.skills, skillToAdd]; // push()
             await dataSource.getRepository(Wilder).save(wilderToUpdate);
             res.send("Skill added");
+
         } catch (error){
             console.log(error);
             res.send("Error adding skill to wilder");
