@@ -1,5 +1,6 @@
 const dataSource = require("../utils").dataSource;
 const Wilder = require("../entity/Wilder");
+const Skill = require("../entity/Skill");
 
 module.exports = {
     create: (req, res) => {
@@ -66,4 +67,35 @@ module.exports = {
                 res.status(404).send("Test error 404");
         }
     },
+    addSkill: async (req, res) => {
+        try{
+            // recuperation du premier wilder a mettre a jour
+            const wilderToUpdate = await dataSource.getRepository(Wilder).findOneBy({
+                id: req.params.wilderId,
+            });
+            console.log("wilderToUpdate", wilderToUpdate);
+
+            if(!wilderToUpdate){
+                return res.status(404).send("Wilder not found");
+            }
+
+            // recuperation de la competence a ajouter
+            const skillToAdd = await dataSource.getRepository(Skill).findOneBy({
+                id: req.params.skillId,
+            });
+            console.log("skillToAdd", skillToAdd);
+
+            if(!skillToAdd){
+                return res.statuts(404).send('Skill not found');
+            }
+
+            wilderToUpdate.skills = [...wilderToUpdate.skills, skillToAdd];
+
+            await dataSource.getRepository(Wilder).save(wilderToUpdate);
+            res.send("Skill added");
+        } catch (error){
+            console.log(error);
+            res.send("Error adding skill to wilder");
+        }
+    }
 };

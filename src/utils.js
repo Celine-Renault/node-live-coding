@@ -9,5 +9,6 @@ module.exports = {
         database: "./wildersdb.sqlite",
         synchronize: true,
         entities: [entityWilder, entitySkill],
+        logging: ["query", "error"],
     })
 };
