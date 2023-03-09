@@ -1,5 +1,6 @@
 const express = require("express"); 
 // const typeorm = require("typeorm");
+const cors = require("cors");
 const Wilder = require("./entity/Wilder");
 const Skill = require("./entity/Skill");
 const dataSource = require("./utils").dataSource;
@@ -10,6 +11,8 @@ const skillController = require("./controller/skill_controller");
 const app = express(); 
 
 app.use(express.json());
+
+app.use(cors());
 
 app.get("/", (req, res) => { 
   res.send("Hello World"); 
@@ -35,6 +38,6 @@ const start = async() => {
     // await dataSource.getRepository(Wilder).save({
     //     name: "New Wilder"
     // });
-    app.listen(3000, () => console.log("Server started on 3000"));
+    app.listen(5000, () => console.log("Server started on 5000"));
 };
 start();

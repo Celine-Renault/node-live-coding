@@ -1,8 +1,7 @@
 import "./Header.css";
 // import { useState } from 'react';
-
 export default function Header() {
-    	// const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
 	return (
 		<header>
 			{/* <p>Currently at {counter}</p> */}
