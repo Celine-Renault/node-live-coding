@@ -1,14 +1,16 @@
 import "../components/Skill.css";
 
-const Skill = ({ title, votes }) => {
+// const Skill = ({ name, votes }) => {
+    const Skill = ({ name }) => {
+        console.log(name);
 	return (
 		<li>
 			{/* {skills.map((skills, index) => {
 				return (<Skill key={index} title={skills.title} votes={skills.votes} />);
 			})} */}
 
-			{title}
-			<span className="votes">{votes}</span>
+			{name}
+			{/* <span className="votes">{votes}</span> */}
 		</li>
 	);
 };
