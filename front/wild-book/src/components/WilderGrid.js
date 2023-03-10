@@ -3,7 +3,7 @@ import "./WilderGrid.css";
 import WilderCard from "../components/WilderCard.js";
 // import wildersData from "../dataWilders";
 
-export default function WilderGrid({wilders}) {
+export default function WilderGrid({wilders, fetchData}) {
     // console.log(name);
     // console.log(skills);
     console.log('wilderGrid',wilders);
@@ -18,7 +18,8 @@ export default function WilderGrid({wilders}) {
                         key={wilder.id} 
                         name={wilder.name} 
                         // city={wilder.city}
-                        skills={wilder.skills} ></WilderCard>
+                        skills={wilder.skills} 
+                        fetchData={fetchData}></WilderCard>
                         // <WilderCard 
                         // key={index} 
                         // name={wilder.name} 

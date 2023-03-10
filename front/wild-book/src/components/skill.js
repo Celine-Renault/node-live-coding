@@ -2,7 +2,7 @@ import "../components/Skill.css";
 
 // const Skill = ({ name, votes }) => {
     const Skill = ({ name }) => {
-        console.log(name);
+        // console.log(name);
 	return (
 		<li>
 			{/* {skills.map((skills, index) => {
