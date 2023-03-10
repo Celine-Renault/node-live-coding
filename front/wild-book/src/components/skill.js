@@ -8,7 +8,6 @@ import "../components/Skill.css";
 			{/* {skills.map((skills, index) => {
 				return (<Skill key={index} title={skills.title} votes={skills.votes} />);
 			})} */}
-
 			{name}
 			{/* <span className="votes">{votes}</span> */}
 		</li>

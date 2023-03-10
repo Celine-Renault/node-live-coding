@@ -10,8 +10,8 @@ const skillController = require("./controller/skill_controller");
 
 const app = express(); 
 
+// middleware
 app.use(express.json());
-
 app.use(cors());
 
 app.get("/", (req, res) => { 
