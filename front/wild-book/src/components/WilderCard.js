@@ -3,15 +3,16 @@ import "./WilderCard.css";
 import Skill from "./Skill.js";
 
 // const Wilder = ({ name, city, skills }) => {
-    const Wilder = ({ name, skills }) => {
+    const Wilder = ({ name, city, skills }) => {
     console.log(name);
+    console.log(city);
     console.log(skills);
 	return (
 		<>
 			<article className="card">
 				<img src={blank_profile} alt={`${name} Profile`} />
 				<h3>{name}</h3>
-				{/* <p>{city}</p> */}
+				<p>{city}</p>
 				<h4>Wild Skills</h4>
 				<ul className="skills">
                     {skills.map((skill) => {

@@ -17,7 +17,7 @@ export default function WilderGrid({wilders, fetchData}) {
 						<WilderCard 
                         key={wilder.id} 
                         name={wilder.name} 
-                        // city={wilder.city}
+                        city={wilder.city}
                         skills={wilder.skills} 
                         fetchData={fetchData}></WilderCard>
                         // <WilderCard 

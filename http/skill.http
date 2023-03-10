@@ -2,7 +2,7 @@ POST http://localhost:5000/api/skill
 Content-Type: application/json
 
 {
-    "name": "VUEJS"
+    "name": "JAVA SCRIPT"
 }
 
 ###
